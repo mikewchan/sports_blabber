@@ -1,0 +1,29 @@
+/* You can change this font if you want */
+/* $baseFontFamily: Oxygen;
+@import url(http://googleapis.com/css?family=Oxygen); */
+
+$btnPrimaryBackground: Green;
+$navbarBackgroundHighlight: White;
+$navbarBackground: White;
+
+
+@import 'bootstrap';
+
+body {
+	padding-top: 60px;
+}
+
+@import 'bootstrap-responsive';
+
+.navbar-inner {
+	@include box-shadow(none !important);
+	border: 0;
+}
+
+.footer {
+	margin-top: 50px;
+	color: $grayLight;
+	a {
+		color: $gray;
+	}
+}
