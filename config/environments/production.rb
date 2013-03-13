@@ -72,7 +72,7 @@ Omrails::Application.configure do
 config.paperclip_defaults = {
   :storage => :s3,
   :s3_credentials => {
-    :bucket => "OMrails2",
+    :bucket => "omrails2",
     :access_key_id => "AKIAJG5657VFIWFWGRPQ",
     :secret_access_key => "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"
   }
