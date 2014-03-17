@@ -1,6 +1,5 @@
-# One Month Rails
+# Sports Blabber
 
-This is the sample application for
-[*One Month Rails: Teach Yourself to Code*](http://onemonthrails.com)
+This is the application that I'm building so sports fans can blabber away and have the best sports debates and conversations on the Internet.
 
-by [Mattan Griffel](http://mattangriffel.com)
+by [Mike Chan](http://mikewchan.com)
