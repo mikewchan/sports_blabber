@@ -1,11 +1,14 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.11'
+gem 'rails', '4.0.2'
 gem 'jquery-rails'
 gem 'devise'
 gem 'simple_form'
-gem "paperclip", "~> 3.0"
 gem 'aws-sdk'
+gem 'protected_attributes'
+gem 'bootstrap-sass', '~> 2.3.2.0'
+# gem "paperclip", "~> 3.0"
+gem 'acts_as_commentable_with_threading'
 
 group :production do
 	gem 'pg'
@@ -16,11 +19,10 @@ group :development, :test do
 end
 
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'bootstrap-sass', '~> 2.2.2.0'
-
-  gem 'uglifier', '>= 1.0.3'
+  gem 'sass-rails',   '~> 4.0.1'
+  gem 'coffee-rails', '~> 4.0.1'
+  gem 'bootstrap-sass', '~> 2.3.2.0'
+  gem 'uglifier', '>= 2.1.1'
 end
 
 
