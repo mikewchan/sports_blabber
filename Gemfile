@@ -6,7 +6,6 @@ gem 'devise'
 gem 'simple_form'
 gem 'aws-sdk'
 gem 'protected_attributes'
-gem 'bootstrap-sass', '~> 2.3.2.0'
 # gem "paperclip", "~> 3.0"
 gem 'acts_as_commentable_with_threading'
 
