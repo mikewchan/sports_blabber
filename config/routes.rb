@@ -1,5 +1,5 @@
 Omrails::Application.routes.draw do
-  resources :posts
+  resources :posts, :has_many => :comments
 
 
   devise_for :users
