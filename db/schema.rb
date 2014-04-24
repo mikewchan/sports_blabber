@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140408134529) do
+ActiveRecord::Schema.define(version: 20140424124028) do
 
   create_table "comments", force: true do |t|
     t.integer  "commentable_id",   default: 0
@@ -44,9 +44,9 @@ ActiveRecord::Schema.define(version: 20140408134529) do
   add_index "pins", ["user_id"], name: "index_pins_on_user_id"
 
   create_table "posts", force: true do |t|
-    t.string   "name"
+    t.string   "URL"
     t.string   "title"
-    t.text     "content"
+    t.text     "summary"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
