@@ -2,7 +2,8 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    
+    @post = Post.find(:all, :order => "id DESC")
 
     respond_to do |format|
       format.html # index.html.erb

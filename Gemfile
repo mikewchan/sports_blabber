@@ -9,6 +9,8 @@ gem 'aws-sdk'
 gem 'protected_attributes'
 gem 'acts_as_commentable_with_threading'
 gem 'bootstrap-sass', '~> 2.3.2.0'
+gem 'hirb', '~> 0.7.1'
+gem 'rails_autolink', :require => 'rails_autolink'
 
 group :production do
 	gem 'pg'

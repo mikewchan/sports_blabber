@@ -11,3 +11,11 @@
  *= require_self
  *= require_tree .
  */
+
+ .controls input, .controls textarea{
+ 	width: 500px;
+ }
+
+/* input[type=text].titlebox{
+	background-color: white;
+} */

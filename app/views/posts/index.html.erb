@@ -1,8 +1,8 @@
 <%= render 'pages/home' %>
 
-<h1>Listing posts</h1>
+<h1>Most Recent Posts</h1>
 
-<table>
+<table id="post-info">
   <tr>
     <th>Article Title</th>
     <th>URL</th>
@@ -12,12 +12,11 @@
     <th></th>
   </tr>
 
-<% @posts.each do |post| %>
+<% @post.each do |post| %>
   <tr>
-    <td><%= post.title %></td>
-    <td><%= post.URL %></td>
+    <td><%= link_to post.title, post %></td>
+    <td><%= auto_link(post.URL) %></td>
     <td><%= post.summary %></td>
-    <td><%= link_to 'Show', post %></td>
     <td><%= link_to 'Edit', edit_post_path(post) %></td>
     <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>

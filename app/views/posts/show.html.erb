@@ -7,14 +7,13 @@
 
 <p>
   <b>URL:</b>
-  <%= @post.URL %>
+  <%= auto_link(@post.URL) %>
 </p>
 
 <p>
   <b>Article Summary:</b>
   <%= @post.summary %>
 </p>
-
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
