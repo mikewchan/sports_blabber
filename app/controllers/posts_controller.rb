@@ -25,7 +25,8 @@ class PostsController < ApplicationController
   # GET /posts/new
   # GET /posts/new.json
   def new
-    @post = current_user.post.new
+    
+    @post = Post.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -41,7 +42,8 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
-    @post = current_user.post.new(params[:post])
+    @post = Post.new(params[:post])
+    @post.user_id = current_user.id
 
     respond_to do |format|
       if @post.save
@@ -57,7 +59,7 @@ class PostsController < ApplicationController
   # PUT /posts/1
   # PUT /posts/1.json
   def update
-    @post = current_user.post.find(params[:id])
+    @post = Post.find(params[:id])
 
     respond_to do |format|
       if @post.update_attributes(params[:post])
@@ -73,7 +75,8 @@ class PostsController < ApplicationController
   # DELETE /posts/1
   # DELETE /posts/1.json
   def destroy
-    @post = current_user.post.find(params[:id])
+    @post = Post.find(params[:id])
+   
     @post.destroy
 
     respond_to do |format|

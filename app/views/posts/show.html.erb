@@ -15,9 +15,8 @@
   <%= @post.blabber %>
 </p>
 
-<%= current_user %>
-<% if @current_user == @post.user %>
+<% if user_signed_in? && current_user == @post.user %>
 	<%= link_to 'Edit', edit_post_path(@post) %> |
-<% end %>
+ <% end %>
 
 <%= link_to 'Back', posts_path %>
