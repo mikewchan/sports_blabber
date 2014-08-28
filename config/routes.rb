@@ -1,6 +1,6 @@
 Omrails::Application.routes.draw do
   resources :posts, :has_many => :comments
-
+  resources :comments, :only => [:create, :destroy]
 
   devise_for :users
 
