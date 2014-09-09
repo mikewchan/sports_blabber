@@ -15,6 +15,7 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @post = Post.find(params[:id])
+    #Shows the list of comments in reverse order they were created
     @comments = @post.comment_threads.order('created_at desc')
     @new_comment = Comment.build_from(@post, current_user, "")
 

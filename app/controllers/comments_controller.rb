@@ -1,15 +1,16 @@
 class CommentsController < ApplicationController
 	before_filter :get_post
 
-	def get_post
-		@post = Post.find(params[:post_id])
-	end
+	# def get_post
+	#	@post = Post.find(params[:post_id])
+	# end
 
 	def index
 		@comments = @post.comments.all
 	end
 
 	def create
+        @post = Post.find(params[:post_id])
 		@comment_hash = params[:comment]
 		@obj = @comment_hash[:commentable_type].constantize.find(@comment_hash[:commentable_id])
         # Not implemented: check to see whether the user has permission to create a comment on this object
